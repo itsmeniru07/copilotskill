@@ -12,7 +12,7 @@
     "name": "default",
     "protocol": "BotFrameworkV3",
     "description": "Default endpoint",
-    "url": "https://copilotSkill.azurewebsites.net/api/messages",
+    "url": "https://copilotskill.azurewebsites.net/api/messages",
     "msAppId": "906d9390-f509-4088-9df0-9b575484324c"
   },
   "activities": {
