@@ -1,24 +1,39 @@
 {
-  "$schema": "https://schemas.botframework.com/schemas/skill-manifest-2.2.json",
-  "manifestVersion": "2.2",
-  "id": "leave-skill",
-  "name": "Leave Skill",
-  "version": "1.0",
-  "description": "A basic Copilot Studio skill for handling leave requests",
-  "publisherName": "Your Name or Org",
-  "privacyUrl": "https://www.example.com/privacy",
-  "termsOfUseUrl": "https://www.example.com/termofuse",
-  "endpoint": {
-    "name": "default",
-    "protocol": "BotFrameworkV3",
-    "description": "Default endpoint",
-    "url": "https://copilotskill.azurewebsites.net/api/messages",
-    "msAppId": "906d9390-f509-4088-9df0-9b575484324c"
-  },
-  "activities": {
-    "leaveRequest": {
-      "type": "message",
-      "description": "Handle a leave request"
-    }
-  }
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.21",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "developer": {
+        "name": "My App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/privacy",
+        "termsOfUseUrl": "https://www.example.com/termofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Knowledge_Agent${{APP_NAME_SUFFIX}}",
+        "full": "Full name for Knowledge_Agent"
+    },
+    "description": {
+        "short": "Short description for Knowledge_Agent",
+        "full": "Full description for Knowledge_Agent"
+    },
+    "accentColor": "#FFFFFF",
+    "composeExtensions": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "copilotAgents": {
+        "declarativeAgents": [            
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "validDomains": []
 }
