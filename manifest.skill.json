@@ -1,5 +1,6 @@
 {
-  "$schema": "https://schemas.botframework.com/schemas/skills/v2.2/skill-manifest.json",
+  "$schema": "https://schemas.botframework.com/schemas/skill-manifest-2.2.json",
+  "manifestVersion": "2.2",
   "id": "leave-skill",
   "name": "Leave Skill",
   "version": "1.0",
@@ -7,15 +8,13 @@
   "publisherName": "Your Name or Org",
   "privacyUrl": "https://www.example.com/privacy",
   "termsOfUseUrl": "https://www.example.com/termofuse",
-  "endpoints": [
-    {
-      "name": "default",
-      "protocol": "BotFrameworkV3",
-      "description": "Default endpoint",
-      "endpointUrl": "https://copilotSkill.azurewebsites.net/api/messages",
-      "msAppId": "906d9390-f509-4088-9df0-9b575484324c"
-    }
-  ],
+  "endpoint": {
+    "name": "default",
+    "protocol": "BotFrameworkV3",
+    "description": "Default endpoint",
+    "url": "https://copilotSkill.azurewebsites.net/api/messages",
+    "msAppId": "906d9390-f509-4088-9df0-9b575484324c"
+  },
   "activities": {
     "leaveRequest": {
       "type": "message",
